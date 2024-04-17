@@ -1,3 +1,5 @@
+source "debugger"
+
 puts "Type a valid cellphone number:"
 phone = gets.to_s
 
@@ -13,6 +15,8 @@ end
 
 puts "Type a valid name and surname"
 full_name = gets.to_s
+
+debugger
 
 if full_name =~ /^*.[a-zA-Z]*[a-zA-Z]/
     puts "#{green_text} This name is valid #{reset_color}"
