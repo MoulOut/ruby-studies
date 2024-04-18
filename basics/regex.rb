@@ -1,4 +1,4 @@
-source "debugger"
+require "byebug"
 
 puts "Type a valid cellphone number:"
 phone = gets.to_s
