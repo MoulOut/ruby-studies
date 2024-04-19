@@ -43,6 +43,26 @@ function_with_block {puts "Block being executed"}
 function_with_block do
   puts "Block 1"
   puts "Block 2"
-  puts "Block 3"
-  puts "Block 4"
 end
+
+say_hello = Proc.new {puts "Hello World"}
+say_hello.call
+
+def execute_proc(proc)
+  proc.call
+end
+
+new_proc = Proc.new {puts "Executing proc"}
+execute_proc(new_proc)
+
+multiply = Proc.new do |num1, num2|
+  num1 * num2
+end
+
+puts result = multiply.call(2,7)
+
+say_goodbye = -> { puts "Goodbye World"}
+say_goodbye.call
+
+say_goodbye = lambda {puts "Goodbye World!"}
+say_goodbye.call
